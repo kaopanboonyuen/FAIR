@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- TAB TITLE -->
+  <title>FAIR — Visual Integrity Infrastructure for Automotive AI</title>
+
+  <!-- FAVICON -->
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕊️</text></svg>"
+  />
+
+  <meta
+    name="description"
+    content="FAIR — AI Quality Assurance Infrastructure for Automotive Underwriting and Claim Intelligence."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#ffffff;
+      color:#0f172a;
+      overflow-x:hidden;
+    }
+
+    ::selection{
+      background:#111111;
+      color:white;
+    }
+
+    .section-padding{
+      padding-top:120px;
+      padding-bottom:120px;
+    }
+
+    .container-custom{
+      max-width:1400px;
+      margin:auto;
+      padding-left:32px;
+      padding-right:32px;
+    }
+
+    .border-soft{
+      border:1px solid #e2e8f0;
+    }
+
+    .card{
+      background:white;
+      border:1px solid #e2e8f0;
+      border-radius:32px;
+      transition:all .4s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      box-shadow:
+      0 20px 60px rgba(15,23,42,.06);
+    }
+
+    .fade-up{
+      opacity:0;
+      transform:translateY(40px);
+      transition:all 1s ease;
+    }
+
+    .fade-up.show{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .status-dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+    }
+
+    .terminal{
+      background:#0f172a;
+      color:#e2e8f0;
+      border-radius:28px;
+      padding:32px;
+      overflow:auto;
+      position:relative;
+    }
+
+    .terminal-top{
+      display:flex;
+      gap:8px;
+      margin-bottom:24px;
+    }
+
+    .terminal-dot{
+      width:12px;
+      height:12px;
+      border-radius:50%;
+    }
+
+    .metric-line{
+      display:flex;
+      justify-content:space-between;
+      padding:14px 0;
+      border-bottom:1px solid #f1f5f9;
+    }
+
+    .typing-wrapper{
+      min-height:32px;
+      display:flex;
+      align-items:center;
+      font-weight:600;
+    }
+
+    .cursor{
+      width:2px;
+      height:18px;
+      background:currentColor;
+      display:inline-block;
+      margin-left:5px;
+      animation:blink 1s infinite;
+    }
+
+    @keyframes blink{
+      0%,50%{opacity:1;}
+      51%,100%{opacity:0;}
+    }
+
+    .hero-title{
+      letter-spacing:-4px;
+      line-height:.95;
+    }
+
+    .minimal-button{
+      border:1px solid #dbe4ee;
+      transition:all .3s ease;
+    }
+
+    .minimal-button:hover{
+      background:#111111;
+      color:white;
+      border-color:#111111;
+    }
+
+    .black-button{
+      background:#111111;
+      color:white;
+      transition:all .3s ease;
+    }
+
+    .black-button:hover{
+      transform:translateY(-2px);
+      background:#000000;
+    }
+
+    .grid-bg{
+      background-image:
+      linear-gradient(to right,#f8fafc 1px,transparent 1px),
+      linear-gradient(to bottom,#f8fafc 1px,transparent 1px);
+      background-size:50px 50px;
+    }
+
+    .big-number{
+      font-size:110px;
+      line-height:1;
+      font-weight:900;
+      letter-spacing:-6px;
+      color:#f1f5f9;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- ===================================================== -->
+<!-- HERO -->
+<!-- ===================================================== -->
+
+<section class="min-h-screen flex items-center grid-bg">
+
+  <div class="container-custom">
+
+    <div class="grid lg:grid-cols-2 gap-24 items-center">
+
+      <!-- LEFT -->
+
+      <div class="fade-up">
+
+        <div
+          class="inline-flex items-center gap-3 border-soft rounded-full px-5 py-3 mb-10"
+        >
+
+          <div class="status-dot bg-green-500"></div>
+
+          <span class="text-sm tracking-[0.25em] text-slate-500 uppercase">
+            Visual Integrity Infrastructure
+          </span>
+
+        </div>
+
+        <h1
+          class="hero-title text-[72px] lg:text-[120px] font-black mb-8"
+        >
+          FAIR
+        </h1>
+
+        <div
+          class="text-2xl lg:text-4xl font-semibold text-slate-700 mb-10 leading-tight"
+        >
+          AI Quality Assurance Infrastructure
+          for Automotive Intelligence
+        </div>
+
+        <p
+          class="text-xl text-slate-500 leading-relaxed max-w-2xl mb-12"
+        >
+          FAIR prevents unreliable visual evidence from contaminating
+          downstream underwriting, claim assessment, and automotive AI systems.
+        </p>
+
+        <!-- LAB -->
+
+        <div class="card p-8 mb-12">
+
+          <div class="text-sm uppercase tracking-[0.3em] text-slate-400 mb-4">
+            Research Laboratory
+          </div>
+
+          <div class="text-3xl font-black mb-2">
+            MARSAIL
+          </div>
+
+          <div class="text-slate-500 text-lg mb-5">
+            Motor AI Recognition Solution AI Laboratory
+          </div>
+
+          <div class="text-slate-700">
+            Developed by
+            <span class="font-semibold">
+              Teerapong Panboonyuen (Kao)
+            </span>
+          </div>
+
+        </div>
+
+        <!-- BUTTONS -->
+
+        <div class="flex flex-wrap gap-4">
+
+          <a
+            href="https://github.com/kaopanboonyuen/FAIR"
+            target="_blank"
+            class="black-button rounded-2xl px-8 py-4 font-semibold"
+          >
+            GitHub Repository
+          </a>
+
+          <a
+            href="#demo"
+            class="minimal-button rounded-2xl px-8 py-4 font-semibold"
+          >
+            Live Demonstration
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+
+      <div class="fade-up">
+
+        <div class="card p-10">
+
+          <div class="flex justify-between items-center mb-10">
+
+            <div>
+
+              <div
+                class="text-sm uppercase tracking-[0.25em] text-slate-400 mb-2"
+              >
+                FAIR Engine
+              </div>
+
+              <div class="text-3xl font-black">
+                Validation Pipeline
+              </div>
+
+            </div>
+
+            <div class="flex items-center gap-3">
+
+              <div class="status-dot bg-green-500"></div>
+
+              <div class="font-semibold text-green-600">
+                ACTIVE
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="space-y-1">
+
+            <div class="metric-line">
+              <span class="text-slate-500">
+                Blur Detection
+              </span>
+
+              <span class="font-semibold">
+                PASS
+              </span>
+            </div>
+
+            <div class="metric-line">
+              <span class="text-slate-500">
+                Brightness Validation
+              </span>
+
+              <span class="font-semibold">
+                PASS
+              </span>
+            </div>
+
+            <div class="metric-line">
+              <span class="text-slate-500">
+                Automotive Verification
+              </span>
+
+              <span class="font-semibold">
+                PASS
+              </span>
+            </div>
+
+            <div class="metric-line">
+              <span class="text-slate-500">
+                Super Zoom Detection
+              </span>
+
+              <span class="font-semibold">
+                NORMAL
+              </span>
+            </div>
+
+          </div>
+
+          <div
+            class="mt-10 rounded-3xl border border-green-200 bg-green-50 p-8"
+          >
+
+            <div
+              class="text-sm uppercase tracking-[0.3em] text-green-600 mb-3"
+            >
+              Final Decision
+            </div>
+
+            <div class="text-5xl font-black mb-4">
+              APPROVED
+            </div>
+
+            <div class="text-slate-600 leading-relaxed">
+              Eligible for AI underwriting and automotive claim intelligence.
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- PIPELINE -->
+<!-- ===================================================== -->
+
+<section class="section-padding">
+
+  <div class="container-custom">
+
+    <div class="text-center mb-24 fade-up">
+
+      <div class="text-sm tracking-[0.3em] uppercase text-slate-400 mb-5">
+        Architecture
+      </div>
+
+      <h2 class="text-6xl font-black mb-8">
+        FAIR Pipeline
+      </h2>
+
+      <p class="text-slate-500 text-xl max-w-3xl mx-auto leading-relaxed">
+        Deterministic mathematical validation combined with semantic AI verification.
+      </p>
+
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-8">
+
+      <div class="card p-8">
+        <div class="big-number mb-6">01</div>
+        <div class="text-2xl font-bold mb-3">
+          Input
+        </div>
+        <div class="text-slate-500">
+          Vehicle image ingestion
+        </div>
+      </div>
+
+      <div class="card p-8">
+        <div class="big-number mb-6">02</div>
+        <div class="text-2xl font-bold mb-3">
+          Quality
+        </div>
+        <div class="text-slate-500">
+          Blur & exposure analysis
+        </div>
+      </div>
+
+      <div class="card p-8">
+        <div class="big-number mb-6">03</div>
+        <div class="text-2xl font-bold mb-3">
+          Semantic
+        </div>
+        <div class="text-slate-500">
+          Automotive validation
+        </div>
+      </div>
+
+      <div class="card p-8">
+        <div class="big-number mb-6">04</div>
+        <div class="text-2xl font-bold mb-3">
+          Zoom
+        </div>
+        <div class="text-slate-500">
+          Structural context analysis
+        </div>
+      </div>
+
+      <div class="card p-8">
+        <div class="big-number mb-6">05</div>
+        <div class="text-2xl font-bold mb-3">
+          Decision
+        </div>
+        <div class="text-slate-500">
+          PASS / REJECT
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- PASS FAIL -->
+<!-- ===================================================== -->
+
+<section id="demo" class="section-padding bg-slate-50">
+
+  <div class="container-custom">
+
+    <div class="text-center mb-24 fade-up">
+
+      <div class="text-sm tracking-[0.3em] uppercase text-slate-400 mb-5">
+        Explainability
+      </div>
+
+      <h2 class="text-6xl font-black mb-8">
+        PASS vs REJECT
+      </h2>
+
+      <p class="text-slate-500 text-xl">
+        Transparent AI decisioning for automotive insurance ecosystems.
+      </p>
+
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10">
+
+      <!-- ===================================================== -->
+      <!-- PASS -->
+      <!-- ===================================================== -->
+
+      <div class="card overflow-hidden">
+
+        <!-- HEADER -->
+
+        <div class="p-8 border-b border-slate-100">
+
+          <div class="flex justify-between items-center">
+
+            <div>
+
+              <div
+                class="text-sm tracking-[0.3em] uppercase text-slate-400 mb-3"
+              >
+                FAIR_STATUS
+              </div>
+
+              <div class="text-5xl font-black text-green-600">
+                PASS
+              </div>
+
+            </div>
+
+            <div class="status-dot bg-green-500"></div>
+
+          </div>
+
+        </div>
+
+        <!-- IMAGE -->
+
+        <div class="w-full h-[420px] overflow-hidden bg-slate-100">
+
+          <img
+            src="sample_image/TESLA_TOY.png"
+            class="w-full h-full object-cover transition duration-700 hover:scale-105"
+          />
+
+        </div>
+
+        <!-- CONTENT -->
+
+        <div class="p-8">
+
+          <div class="space-y-3 mb-10">
+
+            <div class="metric-line">
+
+              <span class="text-slate-500">
+                Blur Score
+              </span>
+
+              <span class="font-semibold">
+                110.11
+              </span>
+
+            </div>
+
+            <div class="metric-line">
+
+              <span class="text-slate-500">
+                Brightness
+              </span>
+
+              <span class="font-semibold">
+                0.46
+              </span>
+
+            </div>
+
+            <div class="metric-line">
+
+              <span class="text-slate-500">
+                Vehicle Tag
+              </span>
+
+              <span class="font-semibold">
+                FrontRightCorner+zoom-out
+              </span>
+
+            </div>
+
+            <div class="metric-line">
+
+              <span class="text-slate-500">
+                Zoom Status
+              </span>
+
+              <span class="font-semibold">
+                NORMAL
+              </span>
+
+            </div>
+
+          </div>
+
+          <!-- TYPING -->
+
+          <div
+            class="rounded-2xl bg-green-50 border border-green-100 p-5"
+          >
+
+            <div class="typing-wrapper text-green-700">
+
+              <span id="passTyping"></span>
+              <span class="cursor"></span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ===================================================== -->
+      <!-- REJECT -->
+      <!-- ===================================================== -->
+
+      <div class="card overflow-hidden">
+
+        <!-- HEADER -->
+
+        <div class="p-8 border-b border-slate-100">
+
+          <div class="flex justify-between items-center">
+
+            <div>
+
+              <div
+                class="text-sm tracking-[0.3em] uppercase text-slate-400 mb-3"
+              >
+                FAIR_STATUS
+              </div>
+
+              <div class="text-5xl font-black text-red-600">
+                REJECT
+              </div>
+
+            </div>
+
+            <div class="status-dot bg-red-500"></div>
+
+          </div>
+
+        </div>
+
+        <!-- IMAGE -->
+
+        <div class="w-full h-[420px] overflow-hidden bg-slate-100">
+
+          <img
+            src="sample_image/FULL_TOY_STORY.png"
+            class="w-full h-full object-cover transition duration-700 hover:scale-105"
+          />
+
+        </div>
+
+        <!-- CONTENT -->
+
+        <div class="p-8">
+
+          <div class="space-y-3 mb-10">
+
+            <div class="metric-line">
+
+              <span class="text-slate-500">
+                Failure Reason
+              </span>
+
+              <span class="font-semibold text-red-600">
+                NOT_CAR_IMAGE
+              </span>
+
+            </div>
+
+            <div class="metric-line">
+
+              <span class="text-slate-500">
+                Semantic Tag
+              </span>
+
+              <span class="font-semibold">
+                Others+Others
+              </span>
+
+            </div>
+
+            <div class="metric-line">
+
+              <span class="text-slate-500">
+                Brightness
+              </span>
+
+              <span class="font-semibold">
+                0.58
+              </span>
+
+            </div>
+
+            <div class="metric-line">
+
+              <span class="text-slate-500">
+                Zoom Status
+              </span>
+
+              <span class="font-semibold">
+                NORMAL
+              </span>
+
+            </div>
+
+          </div>
+
+          <!-- TYPING -->
+
+          <div
+            class="rounded-2xl bg-red-50 border border-red-100 p-5"
+          >
+
+            <div class="typing-wrapper text-red-700">
+
+              <span id="rejectTyping"></span>
+              <span class="cursor"></span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- MATHEMATICAL FOUNDATION -->
+<!-- ===================================================== -->
+
+<!-- MathJax -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<section class="section-padding bg-white">
+
+  <div class="container-custom">
+
+    <!-- HEADER -->
+
+    <div class="text-center mb-28 fade-up">
+
+      <div
+        class="text-sm tracking-[0.35em] uppercase text-slate-400 mb-5"
+      >
+        Mathematical Foundation
+      </div>
+
+      <h2
+        class="text-6xl lg:text-7xl font-black mb-8 tracking-tight"
+      >
+        Deterministic Validation
+      </h2>
+
+      <p
+        class="text-slate-500 text-xl max-w-3xl mx-auto leading-relaxed"
+      >
+        FAIR integrates deterministic image quality analysis with semantic
+        automotive verification to establish production-grade visual integrity
+        for underwriting intelligence systems.
+      </p>
+
+    </div>
+
+    <!-- GRID -->
+
+    <div class="grid lg:grid-cols-2 gap-10">
+
+      <!-- ===================================================== -->
+      <!-- BLUR DETECTION -->
+      <!-- ===================================================== -->
+
+      <div class="card p-12 relative overflow-hidden">
+
+        <!-- TOP -->
+
+        <div class="flex items-center justify-between mb-8">
+
+          <div>
+
+            <div
+              class="text-sm uppercase tracking-[0.3em] text-slate-400 mb-4"
+            >
+              Blur Detection
+            </div>
+
+            <h3 class="text-4xl font-black tracking-tight">
+              Variance of Laplacian
+            </h3>
+
+          </div>
+
+          <div
+            class="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center text-2xl"
+          >
+            ∇²
+          </div>
+
+        </div>
+
+        <!-- EQUATION BLOCK -->
+
+        <div
+          class="bg-slate-50 border border-slate-200 rounded-3xl p-8 mb-10 overflow-auto"
+        >
+
+          <div class="text-slate-800 text-[1.15rem] leading-loose">
+
+            $$
+            \mathcal{L}(I)
+            =
+            \frac{1}{N}
+            \sum_{i=1}^{N}
+            \left(
+            \nabla^2 I_i
+            -
+            \mu_{\nabla^2 I}
+            \right)^2
+            $$
+
+            $$
+            \text{Pass}_{blur}
+            =
+            \mathbb{1}
+            \left(
+            \mathcal{L}(I)
+            \geq
+            T_{blur}
+            \right)
+            $$
+
+          </div>
+
+        </div>
+
+        <!-- DESCRIPTION -->
+
+        <p
+          class="text-slate-500 text-lg leading-relaxed"
+        >
+          FAIR evaluates high-frequency spatial responses using second-order
+          differential operators to quantify structural sharpness and reject
+          visually degraded evidence prior to downstream AI inference.
+        </p>
+
+        <!-- BOTTOM TAG -->
+
+        <div class="mt-10 flex items-center gap-3">
+
+          <div class="w-2 h-2 rounded-full bg-slate-400"></div>
+
+          <div class="text-sm text-slate-400 tracking-wide">
+            Deterministic Signal Integrity Analysis
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ===================================================== -->
+      <!-- GLOBAL DECISION -->
+      <!-- ===================================================== -->
+
+      <div class="card p-12 relative overflow-hidden">
+
+        <!-- TOP -->
+
+        <div class="flex items-center justify-between mb-8">
+
+          <div>
+
+            <div
+              class="text-sm uppercase tracking-[0.3em] text-slate-400 mb-4"
+            >
+              Global Decision Engine
+            </div>
+
+            <h3 class="text-4xl font-black tracking-tight">
+              FAIR Eligibility Rule
+            </h3>
+
+          </div>
+
+          <div
+            class="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center text-2xl"
+          >
+            Φ
+          </div>
+
+        </div>
+
+        <!-- EQUATION BLOCK -->
+
+        <div
+          class="bg-slate-50 border border-slate-200 rounded-3xl p-8 mb-10 overflow-auto"
+        >
+
+          <div class="text-slate-800 text-[1.15rem] leading-loose">
+
+            $$
+            \texttt{FAIR}(I)
+            =
+            \mathbb{1}
+            \Big(
+            \mathcal{Q}(I)
+            \land
+            \mathcal{S}(I)
+            \land
+            \mathcal{Z}(I)
+            \Big)
+            $$
+
+            $$
+            \mathcal{Q}(I)
+            =
+            \text{Pass}_{blur}
+            \land
+            \text{Pass}_{brightness}
+            \land
+            \text{Pass}_{darkness}
+            $$
+
+            $$
+            \mathcal{S}(I)
+            =
+            \mathbb{1}
+            \left(
+            \hat{y}
+            \in
+            \mathcal{T}_{valid}
+            \right)
+            $$
+
+          </div>
+
+        </div>
+
+        <!-- DESCRIPTION -->
+
+        <p
+          class="text-slate-500 text-lg leading-relaxed"
+        >
+          FAIR formulates visual eligibility as a hierarchical logical
+          inference system combining deterministic quality assurance,
+          semantic automotive validation, and structural context verification
+          into a unified production-grade governance pipeline.
+        </p>
+
+        <!-- BOTTOM TAG -->
+
+        <div class="mt-10 flex items-center gap-3">
+
+          <div class="w-2 h-2 rounded-full bg-slate-400"></div>
+
+          <div class="text-sm text-slate-400 tracking-wide">
+            Hybrid AI + Mathematical Verification
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- SECOND ROW -->
+    <!-- ===================================================== -->
+
+    <div class="grid lg:grid-cols-2 gap-10 mt-10">
+
+      <!-- EXPOSURE -->
+
+      <div class="card p-12">
+
+        <div
+          class="text-sm uppercase tracking-[0.3em] text-slate-400 mb-5"
+        >
+          Exposure Stability
+        </div>
+
+        <h3 class="text-4xl font-black tracking-tight mb-8">
+          Illumination Constraint
+        </h3>
+
+        <div
+          class="bg-slate-50 border border-slate-200 rounded-3xl p-8 mb-10 overflow-auto"
+        >
+
+          <div class="text-slate-800 text-[1.15rem] leading-loose">
+
+            $$
+            \mathcal{B}(I)
+            =
+            \frac{1}{255N}
+            \sum_{i=1}^{N}
+            I_i
+            $$
+
+            $$
+            T_{min}
+            \leq
+            \mathcal{B}(I)
+            \leq
+            T_{max}
+            $$
+
+          </div>
+
+        </div>
+
+        <p
+          class="text-slate-500 text-lg leading-relaxed"
+        >
+          FAIR constrains global illumination distributions to prevent
+          under-exposure, highlight saturation, glare dominance, and
+          low-information visual evidence.
+        </p>
+
+      </div>
+
+      <!-- SEMANTIC -->
+
+      <div class="card p-12">
+
+        <div
+          class="text-sm uppercase tracking-[0.3em] text-slate-400 mb-5"
+        >
+          Semantic Verification
+        </div>
+
+        <h3 class="text-4xl font-black tracking-tight mb-8">
+          Automotive Consistency
+        </h3>
+
+        <div
+          class="bg-slate-50 border border-slate-200 rounded-3xl p-8 mb-10 overflow-auto"
+        >
+
+          <div class="text-slate-800 text-[1.15rem] leading-loose">
+
+            $$
+            \hat{y}
+            =
+            f_{\theta}(I)
+            $$
+
+            $$
+            \mathcal{S}(I)
+            =
+            \mathbb{1}
+            \left(
+            \hat{y}
+            \in
+            \mathcal{T}_{valid}
+            \right)
+            $$
+
+            $$
+            s
+            =
+            g_{\phi}(I)
+            \in
+            \{
+            \texttt{NORMAL},
+            \texttt{SUPERZOOMIN}
+            \}
+            $$
+
+          </div>
+
+        </div>
+
+        <p
+          class="text-slate-500 text-lg leading-relaxed"
+        >
+          Deep semantic validation ensures that submitted evidence preserves
+          valid automotive viewpoints and sufficient structural context for
+          downstream claim intelligence systems.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- BIBTEX -->
+<!-- ===================================================== -->
+
+<section class="section-padding bg-slate-50">
+
+  <div class="container-custom">
+
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-20">
+
+        <div class="text-sm tracking-[0.3em] uppercase text-slate-400 mb-5">
+          Citation
+        </div>
+
+        <h2 class="text-6xl font-black mb-8">
+          BibTeX
+        </h2>
+
+      </div>
+
+      <div class="terminal">
+
+        <div class="terminal-top">
+
+          <div class="terminal-dot bg-red-400"></div>
+          <div class="terminal-dot bg-yellow-400"></div>
+          <div class="terminal-dot bg-green-400"></div>
+
+        </div>
+
+<pre class="text-sm leading-8">
+@misc{panboonyuen2026fair,
+  title        = {FAIR: Filter And Image Removal},
+  author       = {Teerapong Panboonyuen},
+  year         = {2026},
+  institution  = {MARSAIL: Motor AI Recognition Solution AI Laboratory},
+  note         = {Visual Integrity Infrastructure for Automotive AI}
+}
+</pre>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- FOOTER -->
+<!-- ===================================================== -->
+
+<footer class="section-padding">
+
+  <div class="container-custom">
+
+    <div class="max-w-5xl mx-auto text-center">
+
+      <div
+        class="text-sm tracking-[0.3em] uppercase text-slate-400 mb-6"
+      >
+        MARSAIL Laboratory
+      </div>
+
+      <h2 class="text-6xl font-black mb-10 leading-tight">
+
+        FAIR is not a model.
+        <br>
+        FAIR is infrastructure.
+
+      </h2>
+
+      <p
+        class="text-xl text-slate-500 leading-relaxed mb-16"
+      >
+        Designed for automotive insurance ecosystems requiring reliable,
+        explainable, and production-grade visual evidence validation.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-5">
+
+        <a
+          href="https://github.com/kaopanboonyuen/FAIR"
+          target="_blank"
+          class="black-button rounded-2xl px-8 py-4 font-semibold"
+        >
+          GitHub Repository
+        </a>
+
+        <a
+          href="https://kaopanboonyuen.github.io/FAIR"
+          target="_blank"
+          class="minimal-button rounded-2xl px-8 py-4 font-semibold"
+        >
+          Project Page
+        </a>
+
+      </div>
+
+      <div class="mt-20 text-slate-400">
+
+        © 2026 FAIR — Filter And Image Removal
+        <br>
+        MARSAIL (Motor AI Recognition Solution AI Laboratory)
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- ===================================================== -->
+<!-- SCRIPT -->
+<!-- ===================================================== -->
+
+<script>
+
+  // =========================================
+  // FADE UP
+  // =========================================
+
+  const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+      if(entry.isIntersecting){
+
+        entry.target.classList.add('show');
+
+      }
+
+    });
+
+  });
+
+  document.querySelectorAll('.fade-up').forEach((el)=>{
+
+    observer.observe(el);
+
+  });
+
+  // =========================================
+  // CONTINUOUS TYPE EFFECT
+  // =========================================
+
+  function loopTyping(elementId, messages, speed = 55, eraseSpeed = 30, delay = 1800){
+
+    const element = document.getElementById(elementId);
+
+    let messageIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type(){
+
+      const current = messages[messageIndex];
+
+      if(!isDeleting){
+
+        element.textContent = current.substring(0, charIndex + 1);
+
+        charIndex++;
+
+        if(charIndex === current.length){
+
+          isDeleting = true;
+
+          setTimeout(type, delay);
+
+          return;
+        }
+
+      }else{
+
+        element.textContent = current.substring(0, charIndex - 1);
+
+        charIndex--;
+
+        if(charIndex === 0){
+
+          isDeleting = false;
+
+          messageIndex = (messageIndex + 1) % messages.length;
+        }
+
+      }
+
+      setTimeout(type, isDeleting ? eraseSpeed : speed);
+
+    }
+
+    type();
+
+  }
+
+  // PASS LOOP
+
+  loopTyping(
+    "passTyping",
+    [
+      "Image meets all FAIR standards.",
+      "AI underwriting approved.",
+      "High-quality automotive evidence detected.",
+      "Semantic vehicle validation passed."
+    ]
+  );
+
+  // REJECT LOOP
+
+  loopTyping(
+    "rejectTyping",
+    [
+      "NOT_CAR_IMAGE detected.",
+      "Submission rejected by FAIR pipeline.",
+      "Please re-capture directly from vehicle.",
+      "Invalid automotive viewpoint detected."
+    ]
+  );
+
+</script>
+
+</body>
+</html>
